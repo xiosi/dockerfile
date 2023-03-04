@@ -1,0 +1,8 @@
+FROM ratsgo/pytorch1.2-cuda10.0-cudnn7:1.8
+ADD . /root/fastfcn
+
+
+RUN chmod +x /root/fastfcn/lib.sh && /root/fastfcn/lib.sh
+
+
+

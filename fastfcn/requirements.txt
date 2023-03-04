@@ -1,0 +1,5 @@
+nose
+tqdm
+scipy
+cython
+requests

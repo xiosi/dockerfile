@@ -1,0 +1,23 @@
+    1  python -V
+    2  ll
+    3  touch requirements.txt
+    4  vi requirements.txt 
+    5  vim requirements.txt 
+    6  pip 
+    7  pip3 install nose
+    8  pip3 install tqdm
+    9  pip3 install tscipy
+   10  /opt/conda/bin/python -m pip install --upgrade pip
+   11  pip3 install tscipy
+   12  apt install python3-scipy
+   13  sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
+   14  apt update
+   15  apt install python3-scipy
+   16  pip3 install cython
+   17  pip3 install requests
+   18  git
+   19  https://github.com/wuhuikai/FastFCN.git
+   20  git clone https://github.com/wuhuikai/FastFCN.git
+   21  cd FastFCN/
+   22  python -m scripts.prepare_pcontext
+
