@@ -5,6 +5,7 @@ apt update
 apt-get install -y openssh-server
 apt-get install -y net-tools
 apt-get install -y tmux
+apt-get install -y make
 
 mkdir -p /var/run/sshd
 mkdir -p mkdir/root/.ssh/
@@ -30,3 +31,4 @@ apt-get install -y libxrender-dev
 #cat ~/.condarc
 #conda install -y -c anaconda cudatoolkit==9.0
 conda install -y --insecure  pytorch torchvision cudatoolkit=9.2 -c pytorch
+echo "export PATH=/opt/conda/bin:$PATH" >> ~/.bashrc
