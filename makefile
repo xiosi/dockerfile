@@ -13,6 +13,8 @@ build-pspnet:
 	@docker build --tag xiosi/root:fastfcn -f fastfcn/dockerfile fastfcn
 build-segnet:
 	@docker build --tag xiosi/root:segnet -f segnet/dockerfile segnet
+build-mmsegmentation:
+	@docker build --tag xiosi/root:mmsegmentation -f mmsegmentation/dockerfile mmsegmentation
 up-fast-fcn:
 	@docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0,1,2,3 --name fastfcn –shm-size 8G  --privileged -p 7729:22 -v ~/datasets:/root/dataset -v ~/HDD/user/xiosi/code:/root/code xiosi/root:fastfcn  /bin/bash
 
@@ -21,5 +23,7 @@ test:
 
 up-segnet:
 	@docker run -d -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0,1,2,3 --name segnet -m 24g  --privileged -p 1524:6006 -p 7729:22 -v ~/datasets:/root/dataset -v ~/HDD/user/xiosi/code:/root/code   xiosi/root:segnet 
+up-mmsegmentation:
+	@docker run -d -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0,1,2,3 --name segnet -m 24g  --privileged -p 1524:6006 -p 7729:22 -v ~/datasets:/root/dataset -v ~/HDD/user/xiosi/code:/root/code   xiosi/root:segmentation
 exec:
 	@docker exec -it segnet /bin/bash
