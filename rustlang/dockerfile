@@ -1,0 +1,9 @@
+FROM rustlang/rust:nightly-bullseye-slim
+ADD . /root/docker
+
+
+RUN bash /root/docker/lib.sh
+
+ENTRYPOINT ["bash", "/root/docker/entrypoint.sh"]
+
+CMD ["bash"]
